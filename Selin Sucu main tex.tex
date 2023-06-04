@@ -1,0 +1,126 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+
+
+
+
+
+\begin{document}
+
+\chapter\Large\textbf{Chapter 1} \\
+
+\begin{huge}
+    \textbf{Power Series}
+\end{huge} \\
+
+\begin{normalsize}
+\textbf{Definition 1.} {A} \textbf{power series}
+{is a series of the form} 
+\begin{equation}
+\sum_{n=0}^{\infty}= {c_nx^n}={c_0+ c_1x+ c_2x+...}
+\end{equation}
+{where $x$ is a variable and the $c_n$'s are constants called the} \textbf{coefficients} {of the
+series.} \end{normalsize} 
+\begin{par}
+    \begin{normalsize}
+   {For each fixed $x$, the series (1) is a series of constants that we can test for
+convergence or divergence. A power series may converge for some values of $x$
+and diverge for other values of $x$.}
+\end{normalsize}
+\end{par} \\
+
+\begin{par}
+\begin{normalsize}
+ \noindent \textcolor{red}{\textit{Example 1.}}
+ {For what values of $x$ is the series} ${\sum_{n=0}^{\infty}{n!x^n}}$ {convergent?}\\
+ 
+ \end{normalsize}
+\end{par}
+    \begin{normalsize}
+    \noindent {\textit{Solution.}}
+    {We use the Ratio Test. If we let $a_n$, as usual, denote the  \(n\)th term of the series, then $a_n=n!x^n$. If {$x\neq 0$}, we have}
+        \end{normalsize}
+        \begin{normalsize}
+        
+\begin{center} $ \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|=   \lim_{n \to \infty}\left|\frac{(n+1)!x^{n+1}}{n!x^n}\right|= \lim_{n \to \infty}(n + 1)|x|= \infty.$ \end{center}
+
+\end{normalsize}
+\begin{normalsize}
+\noindent
+{By the Ratio Test, the series diverges when {$x\neq 0$}. Thus, the given series
+converges only when x = 0.}\\
+\qed
+
+ \noindent \textcolor{red}{\textit{Example 2.}}
+{For what values of $x$ does the series $\sum_{n=1}^{\infty}\frac{(x-3)^n}{n}$ converge?}\end{normalsize} \\
+
+\begin{normalsize}
+     \noindent \textit{Solution.}
+     {Let} $a_n= \frac{(x-3)^n}{n}$. {Then}
+     
+     \begin{center} $\left|\frac{a_{n+1}}{a_n}\right|=\left|\frac{(x-3)^{n+1}}{n+1} \frac{n}{{(x-3)}^n}\right|$\end{center}
+            
+   \begin{center}
+       
+   $=\frac{1}{1+\frac{1}{n}}\left|{x-3}\right| \to\left|{x-3}\right| $ {as}
+    $n\to \infty $ 
+    \end{center}
+\end{normalsize}
+
+    \newpage
+    \begin{normalsize}
+        {By the Ratio Test, the given series is absolutely convergent, and therefore convergent when $\left|{x-3}\right| < 1$, and divergent when $\left|{x-3}\right| > 1$. Now}
+        \begin{center}
+            $\left|{x-3}\right| < 1 \iff -1<x-3<1 \iff 2<x<4$
+        \end{center}
+       {so the series converges when $2 < x < 4$, and diverges if $x < 2$ or $x > 4$. The Ratio Test gives no information when  $\left|{x-3}\right|=1$ so we must consider $x = 2$ and $x = 4$ separately. If we put $x = 4$ in the series, it becomes $\sum\frac{1}{n}$, the harmonic series, which is divergent. If $x = 2$, the series is $\sum\frac{{-1}^n}{n}$ , which converges by the Alternating Series Test. Thus, the given power series converges for $2\leq x < 4$.}
+    \end{normalsize}
+    \qed\\
+    
+    \begin{normalsize}
+    \noindent
+\textbf{Theorem 1.}  
+\textit{For a given power series there are only three possibilities:}\\
+
+    \textit{1. The series converges only when $x = a$} \\
+    
+    \textit{2. The series converges for all $x$.}\\
+    
+    \textit{3. There is a positive number such that the series converges if $\left|{x-a}\right| < R$ and diverges if $\left|{x-a}\right| > R$.}\\
+     \end{normalsize}
+     \begin{normalsize}
+     \par
+     {The number $R$ in case (3) is called the \textbf{ radius of convergence} of the power series. By convention, the radius of convergence is $R = 0$ in case (1) and $R = \infty$ in case (2). The \textbf{interval of convergence} of a power series is the interval that consists of all values of $x$ for which the series converges. In case (1) the interval consists of just a single point $a$. In case (2) the interval is  $(-\infty,\infty)$. In case (3) note that the inequality $\left|{x-a}\right|< R$ can be rewritten as $a-R < x < a + R$. When $x$ is an \textbf{endpoint} of the interval, that is, $x =a \pm R$, anything can happen; the series might converge at one or both endpoints or it might diverge at both endpoints. Thus, in case (3) there are four possibilities for the interval of convergence: }
+     \begin{center}
+         $(a-R,a+R)$, $(a-R,a+R]$, $[a-R,a+R)$ {or} $[a-R,a+R]$
+         
+     \end{center}
+     \begin{center}
+         \begin{tabular}{|c|c|c|c|}
+\hline
+Series & Radius Of Convergence & Interval of Convergence \\
+\hline
+$\sum_{n=0}^{\infty}x^n$ & $R=1$ & $(-1,1)$ \\
+\hline
+$\sum_{n=0}^{\infty}n!x^n$ & $R=0$ & $\{0\}$ \\
+
+\hline
+$\sum_{n=0}^{\infty}\frac{(x-3)^n}{n}$ & $R=1$ & $[2,4)$ \\
+\hline
+\end{tabular}
+     \end{center}
+     \end{normalsize}
+     
+        
+   
+   
+    
+\end{document}
+
+
